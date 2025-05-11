@@ -92,9 +92,13 @@ h2 {
 	.form {
 		width: 400px;
 	}
-	li,
-	input,
+	.input {
+		font-family: monospace;
+	}
 	h2 {
+		font-family: monospace;
+	}
+	.list li {
 		font-family: monospace;
 	}
 	h2 {
