@@ -13,7 +13,9 @@ if (list) {
 
 formEl.addEventListener('submit', event => {
 	event.preventDefault()
-	toDoList()
+	if (inputEl.value) {
+		toDoList()
+	}
 })
 
 function toDoList(task) {
