@@ -4,7 +4,6 @@ const inputEl = document.querySelector('.input')
 
 const ulEl = document.querySelector('.list')
 
-
 let list = JSON.parse(localStorage.getItem('list'))
 if (list) {
 	list.forEach(task => {
