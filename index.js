@@ -25,10 +25,12 @@ function toDoList(task) {
 	}
 
 	const liEl = document.createElement('li')
+	const pEl = document.createElement('p')
 	if (task && task.checked) {
 		liEl.classList.add('checked')
 	}
-	liEl.innerText = newTask
+	pEl.innerText = newTask
+	liEl.appendChild(pEl)
 	ulEl.appendChild(liEl)
 	inputEl.value = ''
 
@@ -77,6 +79,7 @@ function toDoList(task) {
 		updateLocalStorage()
 	})
 	updateLocalStorage()
+	taskFormatter(pEl, newTask)
 }
 
 // Update Local Storage
@@ -90,4 +93,20 @@ function updateLocalStorage() {
 		})
 	})
 	localStorage.setItem('list', JSON.stringify(list))
+}
+
+function taskFormatter(el, text) {
+	if (window.screen.width < 600 && window.screen.width > 401) {
+		el.innerText.length > 24
+			? (el.innerText = el.innerText.slice(0, 24) + '...')
+			: (el.innerText = text)
+	} else if (window.screen.width < 401) {
+		el.innerText.length > 15
+			? (el.innerText = el.innerText.slice(0, 15) + '...')
+			: (el.innerText = text)
+	} else if (window.screen.width > 600) {
+		el.innerText.length > 44
+			? (el.innerText = el.innerText.slice(0, 42) + '...')
+			: (el.innerText = text)
+	}
 }

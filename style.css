@@ -47,12 +47,12 @@ h1 {
 
 .list li {
 	list-style-type: none;
-	padding: 20px;
 	padding-left: 40px;
 	font-weight: 500;
 	border-top: dotted;
 	border-color: darkgray;
 	position: relative;
+	overflow: hidden;
 }
 
 .list li .fa-trash {
@@ -88,6 +88,10 @@ h1 {
 
 .list li.checked .fa-check-square {
 	color: darkgray;
+}
+.list li p {
+	width: 85%;
+	overflow-x: hidden;
 }
 
 @media (max-width: 600px) {
