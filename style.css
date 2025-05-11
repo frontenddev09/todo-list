@@ -1,17 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
 body {
 	height: 100vh;
 	margin: 0;
 	display: flex;
 	justify-content: center;
-	/* align-items: center; */
-	/* flex-flow: column; */
 	background-color: greenyellow;
+	font-family: 'Roboto Mono', monospace;
+	font-style: normal;
+	letter-spacing: 1px;
 }
-h2 {
+h1 {
 	position: absolute;
-	top: 20%;
+	top: 15%;
 	text-align: center;
-	font-family: cursive;
 	color: darkgreen;
 }
 
@@ -31,7 +33,7 @@ h2 {
 	border-radius: 10px 10px 0 0;
 	border: none;
 	font-size: 20px;
-	font-family: cursive;
+	letter-spacing: 2px;
 }
 
 .input::placeholder {
@@ -47,7 +49,7 @@ h2 {
 	list-style-type: none;
 	padding: 20px;
 	padding-left: 40px;
-	font-family: cursive;
+	font-weight: 500;
 	border-top: dotted;
 	border-color: darkgray;
 	position: relative;
@@ -92,16 +94,9 @@ h2 {
 	.form {
 		width: 400px;
 	}
-	.input {
-		font-family: monospace;
-	}
-	h2 {
-		font-family: monospace;
-	}
-	.list li {
-		font-family: monospace;
-	}
-	h2 {
+
+	h1 {
+		top: 17%;
 		font-size: 30px;
 	}
 }
